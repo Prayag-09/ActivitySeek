@@ -9,9 +9,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "jsx": "preserve",
-    "lib": ["esnext", "dom"],
-    "types": ["svelte"]
+    "lib": ["esnext", "dom"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.svelte"],
   "exclude": ["node_modules/*", "build/*"]
 }
