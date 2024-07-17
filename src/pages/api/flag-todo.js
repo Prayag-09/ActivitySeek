@@ -2,7 +2,7 @@ import { MongoClient, ObjectId } from "mongodb";
 
 async function initDatabase() {
   const mongoClient = await MongoClient.connect(import.meta.env.DB_CONN_STRING, {
-    appName: "findsomethingtodo",
+    appName: "activityseek",
   });
 
   return mongoClient;
@@ -16,7 +16,7 @@ export const POST = async ({ request }) => {
 
     const mongo = await initDatabase();
     const result = await mongo
-      .db("findsomethingtodo")
+      .db("activityseek")
       .collection("todos")
       .findOneAndUpdate(
         { _id: objId },
